@@ -16,6 +16,10 @@ func Put(request PutRequest, manager Github, inputDir string) (*PutResponse, err
 	}
 	path := filepath.Join(inputDir, request.Params.Path, ".git", "resource")
 
+	fmt.Println(inputDir)
+	fmt.Println(request.Params.Path)
+	fmt.Println(path)
+	
 	// Version available after a GET step.
 	var version Version
 	content, err := ioutil.ReadFile(filepath.Join(path, "version.json"))
