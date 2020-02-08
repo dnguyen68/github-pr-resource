@@ -16,9 +16,6 @@ func Put(request PutRequest, manager Github, inputDir string) (*PutResponse, err
 	}
 	path := filepath.Join(inputDir, request.Params.Path, ".git", "resource")
 
-
-        return nil, fmt.Errorf("TEST: failed to read version from path: %s", path)
-
 	fmt.Println(inputDir)
 	fmt.Println(request.Params.Path)
 	fmt.Println(path)
